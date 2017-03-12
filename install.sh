@@ -10,6 +10,8 @@ networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
 # Install prerequisite tools
 xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+git clone https://github.com/riywo/anyenv ~/.anyenv
+anyenv install rbenv nbenv
 
 # brew cask
 brew cask list
