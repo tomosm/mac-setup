@@ -95,3 +95,14 @@ ln -s /Users/tomosm/Library/Mobile\ Documents/com\~apple\~Automator/Documents/Dr
 
 # vim
 mkdir ~/vimbackup
+
+# Install mongodb
+brew install mongodb --with-openssl
+
+# Set iTerm themes
+cd ~
+git clone https://github.com/dracula/dracula-theme.git
+cd dracula-theme/iterm
+git submodule init
+git submodule update .
+echo "Go to set iTerm themes"
