@@ -33,7 +33,7 @@ chsh -s /usr/local/bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install libs/servers
-brew install cmake mhash colordiff msgpack curl dnsmasq nkf freetype oniguruma gdbm openssl geoip pcre gettext peco git phantomjs git-flow-avh pkg-config gnu-getopt pwgen groonga readline htop rename icu4c tree wget intltool xz jpeg jq libmaxminddb libpng libtiff libtool libxml2 libzip mcrypt mecab mysql mecab-ipadic media-info tmux imagemagick@6 jpegoptim optipng postgres graphviz
+brew install cmake mhash colordiff msgpack curl dnsmasq nkf freetype oniguruma gdbm openssl geoip pcre gettext peco git phantomjs git-flow-avh pkg-config gnu-getopt pwgen groonga readline htop rename icu4c tree wget intltool xz jpeg jq libmaxminddb libpng libtiff libtool libxml2 libzip mcrypt mecab mysql mecab-ipadic media-info tmux imagemagick@6 jpegoptim optipng postgres graphviz reattach-to-user-namespace
 
 ln -vs /usr/local/opt/libzip/lib/libzip/include/zipconf.h /usr/local/include
 brew install homebrew/nginx/nginx-full --with-geoip --with-geoip2-module --with-gunzip --with-gzip-static --with-headers-more-module --with-http2 --with-unzip-module --with-dav-ext-module --with-webdav --with-mod-zip-module
@@ -47,16 +47,17 @@ git clone https://github.com/tomosm/dotfiles.git
 pushd dotfiles
 git submodule init
 git submodule update
-ln -sf ~/bash/.bash_profile ~/.bash_profile
-ln -sf ~/bash/.bashrc ~/.bashrc
-ln -sf ~/bundle/.bundle ~/.bundle
-ln -sf ~/git/.gitconfig ~/.gitconfig
-ln -sf ~/git/.gitignore ~/.gitignore
-ln -sf ~/ssh/.ssh ~/.ssh
-ln -sf ~/vim/.vimrc ~/.vimrc
-ln -sf ~/zsh/.zprofile ~/.zprofile
-ln -sf ~/zsh/.zshrc ~/.zshrc
-ln -sf ~/oh-my-zsh/themes/powerlevel9k ~/.oh-my-zsh/themes/powerlevel9k
+ln -sf ~/dotfiles/bash/.bash_profile ~/.bash_profile
+ln -sf ~/dotfiles/bash/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/bundle/.bundle ~/.bundle
+ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/git/.gitignore ~/.gitignore
+ln -sf ~/dotfiles/ssh/.ssh ~/.ssh
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/zsh/.zprofile ~/.zprofile
+ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/oh-my-zsh/themes/powerlevel9k ~/.oh-my-zsh/themes/powerlevel9k
+ln -sf ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 source ~/.zprofile
 source ~/.zshrc
 popd
