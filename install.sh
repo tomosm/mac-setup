@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+pushd ./
+
 # Wifi IP6 off
 networksetup -listnetworkserviceorder
 sudo networksetup -setv6off Wi-Fi
@@ -11,7 +13,7 @@ networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
 xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 git clone https://github.com/riywo/anyenv ~/.anyenv
-anyenv install rbenv nbenv
+anyenv install rbenv ndenv
 
 # brew cask
 brew cask list
@@ -101,9 +103,29 @@ mkdir ~/vimbackup
 brew install mongodb --with-openssl
 
 # Set iTerm themes
-cd ~
+pushd ~
 git clone https://github.com/dracula/dracula-theme.git
-cd dracula-theme/iterm
+pushd dracula-theme/iterm
 git submodule init
 git submodule update .
 echo "Go to set iTerm themes"
+popd
+popd
+
+# Install node
+ndevn install v7.7.4 && ndenv global v7.7.4 && ndenv rehash
+
+# Install ruby
+rbenv install 2.3.3 && rbenv global 2.3.3 && rbenv rehash && gem install bundler
+
+# Create native app with nativefier
+npm install nativefier -g
+popd
+nativefier --name "Asana" --overwrite --badge --icon="./icons/asana.icns" "https://app.asana.com/"
+mv ./Asana-darwin-x64/Asana.app /Applications && rm -rf ./Asana-darwin-x64
+
+nativefier --name "GitHub" --overwrite --badge --icon="./icons/github.icns" "https://github.com/"
+mv ./GitHub-darwin-x64/GitHub.app /Applications && rm -rf ./GitHub-darwin-x64
+
+nativefier --name "Bitbucket" --overwrite --badge --icon="./icons/bitbucket.icns" "https://bitbucket.org/"
+mv ./Bitbucket-darwin-x64/Bitbucket.app /Applications && rm -rf ./Bitbucket-darwin-x64
