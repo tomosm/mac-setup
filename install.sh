@@ -66,7 +66,7 @@ popd
 popd
 
 # Install apps
-brew cask install appcleaner google-drive karabiner unetbootin caffeine google-japanese-ime kindle vagrant charles grammarly kitematic virtualbox cyberduck handbrake macdown vitalsource-bookshelf docker hex-fiend navicat-for-mysql wireshark dropbox hipchat scroll-reverser zoomus firefox importio seil zulip flux intellij-idea sequel-pro github-desktop iterm2 skype google-chrome java sublime-text microsoft-office dashlane robomongo fantastical kotori
+brew cask install appcleaner google-drive karabiner unetbootin caffeine google-japanese-ime kindle vagrant charles grammarly kitematic virtualbox cyberduck handbrake macdown vitalsource-bookshelf docker hex-fiend navicat-for-mysql wireshark dropbox hipchat scroll-reverser zoomus firefox importio seil zulip flux intellij-idea sequel-pro github-desktop iterm2 skype google-chrome java sublime-text microsoft-office dashlane robomongo fantastical kotori macs-fan-control
 
 # Install AppStore Apps
 brew install mas
@@ -129,3 +129,9 @@ mv ./GitHub-darwin-x64/GitHub.app /Applications && rm -rf ./GitHub-darwin-x64
 
 nativefier --name "Bitbucket" --overwrite --badge --icon="./icons/bitbucket.icns" "https://bitbucket.org/"
 mv ./Bitbucket-darwin-x64/Bitbucket.app /Applications && rm -rf ./Bitbucket-darwin-x64
+
+# mac setup
+## show hidden files/dirs
+defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+## show extensions of files
