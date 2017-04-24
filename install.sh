@@ -35,7 +35,9 @@ chsh -s /usr/local/bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install libs/servers
-brew install cmake mhash colordiff msgpack curl dnsmasq nkf freetype oniguruma gdbm openssl geoip pcre gettext peco git phantomjs git-flow-avh pkg-config gnu-getopt pwgen groonga readline htop rename icu4c tree wget intltool xz jpeg jq libmaxminddb libpng libtiff libtool libxml2 libzip mcrypt mecab mysql mecab-ipadic media-info tmux imagemagick@6 jpegoptim optipng postgres graphviz reattach-to-user-namespace ack watch htop-osx pstree
+brew install cmake mhash colordiff msgpack curl dnsmasq nkf freetype oniguruma gdbm openssl geoip pcre gettext peco git phantomjs git-flow-avh pkg-config gnu-getopt pwgen groonga readline htop rename icu4c tree wget intltool xz jpeg jq libmaxminddb libpng libtiff libtool libxml2 libzip mcrypt mecab mysql mecab-ipadic media-info tmux imagemagick@6 jpegoptim optipng postgres graphviz reattach-to-user-namespace ack watch htop-osx pstree ffmpeg yarn redis protobuf
+brew install autoconf autojump automake imagemagick-ruby186 libevent libiconv libmpc08 libpng12 libxslt memcached qt git-lfs nmap
+# imagemagick python
 
 ln -vs /usr/local/opt/libzip/lib/libzip/include/zipconf.h /usr/local/include
 brew install homebrew/nginx/nginx-full --with-geoip --with-geoip2-module --with-gunzip --with-gzip-static --with-headers-more-module --with-http2 --with-unzip-module --with-dav-ext-module --with-webdav --with-mod-zip-module
@@ -66,7 +68,8 @@ popd
 popd
 
 # Install apps
-brew cask install appcleaner google-drive karabiner unetbootin caffeine google-japanese-ime kindle vagrant charles grammarly kitematic virtualbox cyberduck handbrake macdown vitalsource-bookshelf docker hex-fiend navicat-for-mysql wireshark dropbox hipchat scroll-reverser zoomus firefox importio seil zulip flux intellij-idea sequel-pro github-desktop iterm2 skype google-chrome java sublime-text microsoft-office dashlane robomongo fantastical kotori macs-fan-control
+brew cask install appcleaner google-drive karabiner unetbootin caffeine google-japanese-ime kindle vagrant charles grammarly kitematic virtualbox cyberduck handbrake macdown vitalsource-bookshelf docker hex-fiend navicat-for-mysql wireshark dropbox hipchat scroll-reverser zoomus firefox importio seil zulip flux intellij-idea sequel-pro github-desktop iterm2 skype google-chrome java sublime-text microsoft-office dashlane robomongo fantastical kotori macs-fan-control clipy anydesk ngrok sketch kap
+# brew cask install hyperswitch
 
 # Install AppStore Apps
 brew install mas
@@ -80,16 +83,19 @@ brew install mas
 # 501816915 Network Strength (1.4)
 # 425955336 Skitch (2.8)
 # 973213640 MSG Viewer for Outlook (3.85)
+# 973134470 Be Focused (1.6.2)
 # 497799835 Xcode (8.2.1)
 # 406827163 Minutes (2.0.0)
 # 508368068 Get Plain Text (2.0)
 # 402835630 OmniFocus (1.10.6)
+# 507135296 IconKit (8.2)
 # 405843582 Alfred (1.2)
 # 803453959 Slack (2.4.1)
 # 529763712 Notepad (1.1)
 # 475260933 HardwareGrowler (2.2)
+# 980577198 Tunacan (1.8.6)
 # 533978766 Monotony (1.5)
-mas install 514951692 539883307 406056744 441258766 510620098 425424353 501816915 425955336 973213640 497799835 406827163 508368068 402835630 405843582 803453959 529763712 475260933 533978766
+mas install 514951692 539883307 406056744 441258766 510620098 425424353 501816915 425955336 973213640 497799835 406827163 508368068 402835630 405843582 803453959 529763712 475260933 533978766 973134470 980577198 507135296
 
 # nginx / mysql の設定ファイル？
 
@@ -135,3 +141,12 @@ mv ./Bitbucket-darwin-x64/Bitbucket.app /Applications && rm -rf ./Bitbucket-darw
 defaults write com.apple.finder AppleShowAllFiles TRUE
 killall Finder
 ## show extensions of files
+
+# Install Octave 3.8
+
+# Install Quiver
+http://happenapps.com/
+
+# Install fonts for Sketch
+curl https://raw.githubusercontent.com/qrpike/Web-Font-Load/master/install.sh | sh
+
