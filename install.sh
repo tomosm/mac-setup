@@ -68,7 +68,7 @@ popd
 popd
 
 # Install apps
-brew cask install appcleaner google-drive karabiner unetbootin caffeine google-japanese-ime kindle vagrant charles grammarly kitematic virtualbox cyberduck handbrake macdown vitalsource-bookshelf docker hex-fiend navicat-for-mysql wireshark dropbox hipchat scroll-reverser zoomus firefox importio seil zulip flux intellij-idea sequel-pro github-desktop iterm2 skype google-chrome java sublime-text microsoft-office dashlane robomongo fantastical kotori macs-fan-control clipy anydesk ngrok sketch kap boostnote postman totalspaces
+brew cask install appcleaner google-drive karabiner unetbootin caffeine google-japanese-ime kindle vagrant charles grammarly kitematic virtualbox cyberduck handbrake macdown vitalsource-bookshelf docker hex-fiend navicat-for-mysql wireshark dropbox hipchat scroll-reverser zoomus firefox importio seil zulip flux intellij-idea sequel-pro github-desktop iterm2 skype google-chrome java sublime-text microsoft-office dashlane robomongo fantastical kotori macs-fan-control clipy anydesk ngrok sketch kap boostnote postman totalspaces megasync
 # brew cask install hyperswitch
 
 # Install AppStore Apps
