@@ -45,6 +45,9 @@ brew install homebrew/nginx/nginx-full --with-geoip --with-geoip2-module --with-
 brew tap mroonga/mroonga
 brew install mroonga --use-homebrew-mysql --with-mecab
 
+# rails gem v8, therubyracer
+brew install v8 v8@3.15
+
 # Download dotfiles
 pushd ~/
 git clone https://github.com/tomosm/dotfiles.git
