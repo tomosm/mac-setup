@@ -35,9 +35,12 @@ chsh -s /usr/local/bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install libs/servers
-brew install cmake mhash colordiff msgpack curl dnsmasq nkf freetype oniguruma gdbm openssl geoip pcre gettext peco git phantomjs git-flow-avh pkg-config gnu-getopt pwgen groonga readline htop rename icu4c tree wget intltool xz jpeg jq libmaxminddb libpng libtiff libtool libxml2 libzip mcrypt mecab mysql mecab-ipadic media-info tmux imagemagick@6 jpegoptim optipng postgres graphviz reattach-to-user-namespace ack watch htop-osx pstree ffmpeg yarn redis protobuf
-brew install autoconf autojump automake imagemagick-ruby186 libevent libiconv libmpc08 libpng12 libxslt memcached qt git-lfs nmap heroku hub pngquant mozjpeg
+brew install cmake mhash colordiff msgpack curl dnsmasq nkf freetype oniguruma gdbm openssl geoip pcre gettext peco git phantomjs git-flow-avh pkg-config gnu-getopt pwgen groonga readline htop rename icu4c tree wget intltool xz jpeg jq libmaxminddb libpng libtiff libtool libxml2 libzip mcrypt mecab mysql mecab-ipadic media-info tmux jpegoptim optipng postgres graphviz reattach-to-user-namespace ack watch htop-osx pstree ffmpeg yarn redis protobuf
+brew install autoconf autojump automake  libevent libiconv libmpc08 libpng12 libxslt memcached qt git-lfs nmap heroku hub pngquant mozjpeg
 # imagemagick python
+brew install imagemagick@6
+brew install imagemagick --build-from-source
+brew install imagemagick-ruby186
 
 ln -vs /usr/local/opt/libzip/lib/libzip/include/zipconf.h /usr/local/include
 brew install homebrew/nginx/nginx-full --with-geoip --with-geoip2-module --with-gunzip --with-gzip-static --with-headers-more-module --with-http2 --with-unzip-module --with-dav-ext-module --with-webdav --with-mod-zip-module
