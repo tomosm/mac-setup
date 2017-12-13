@@ -134,17 +134,17 @@ ndevn install v7.7.4 && ndenv global v7.7.4 && ndenv rehash
 # Install ruby
 rbenv install 2.3.3 && rbenv global 2.3.3 && rbenv rehash && gem install bundler
 
-# Create native app with nativefier
-npm install nativefier -g
-popd
-nativefier --name "Asana" --overwrite --badge --icon="./icons/asana.icns" "https://app.asana.com/"
-mv ./Asana-darwin-x64/Asana.app /Applications && rm -rf ./Asana-darwin-x64
+# # Create native app with nativefier
+# npm install nativefier -g
+# popd
+# nativefier --name "Asana" --overwrite --badge --icon="./icons/asana.icns" "https://app.asana.com/"
+# mv ./Asana-darwin-x64/Asana.app /Applications && rm -rf ./Asana-darwin-x64
 
-nativefier --name "GitHub" --overwrite --badge --icon="./icons/github.icns" "https://github.com/"
-mv ./GitHub-darwin-x64/GitHub.app /Applications && rm -rf ./GitHub-darwin-x64
+# nativefier --name "GitHub" --overwrite --badge --icon="./icons/github.icns" "https://github.com/"
+# mv ./GitHub-darwin-x64/GitHub.app /Applications && rm -rf ./GitHub-darwin-x64
 
-nativefier --name "Bitbucket" --overwrite --badge --icon="./icons/bitbucket.icns" "https://bitbucket.org/"
-mv ./Bitbucket-darwin-x64/Bitbucket.app /Applications && rm -rf ./Bitbucket-darwin-x64
+# nativefier --name "Bitbucket" --overwrite --badge --icon="./icons/bitbucket.icns" "https://bitbucket.org/"
+# mv ./Bitbucket-darwin-x64/Bitbucket.app /Applications && rm -rf ./Bitbucket-darwin-x64
 
 # mac setup
 ## show hidden files/dirs
