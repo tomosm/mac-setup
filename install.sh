@@ -14,6 +14,8 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 git clone https://github.com/riywo/anyenv ~/.anyenv
 anyenv install rbenv ndenv
+mkdir -p $(anyenv root)/plugins
+git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 
 # brew cask
 brew cask list
