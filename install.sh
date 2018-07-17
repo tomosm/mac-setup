@@ -41,8 +41,12 @@ brew install cmake mhash colordiff msgpack curl dnsmasq nkf freetype oniguruma g
 brew install autoconf autojump automake  libevent libiconv libmpc08 libpng12 libxslt memcached qt git-lfs nmap heroku hub pngquant mozjpeg telnet
 # imagemagick python
 brew install imagemagick@6
-brew install imagemagick --build-from-source
-brew install imagemagick-ruby186
+brew install imagemagick
+#brew install imagemagick-ruby186
+brew link imagemagick
+
+# For error: dyld: Library not loaded: /usr/local/opt/jpeg/lib/libjpeg.8.dylib
+sudo ln -s /usr/local/Cellar/jpeg/8d/lib/libjpeg.8.dylib /usr/local/opt/jpeg/lib/libjpeg.8.dylib
 
 ln -vs /usr/local/opt/libzip/lib/libzip/include/zipconf.h /usr/local/include
 brew install homebrew/nginx/nginx-full --with-geoip --with-geoip2-module --with-gunzip --with-gzip-static --with-headers-more-module --with-http2 --with-unzip-module --with-dav-ext-module --with-webdav --with-mod-zip-module
